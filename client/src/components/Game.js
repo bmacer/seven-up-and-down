@@ -15,7 +15,7 @@ import wildCardSound from "../assets/sounds/wild-sound.mp3";
 import draw4CardSound from "../assets/sounds/draw4-sound.mp3";
 import gameOverSound from "../assets/sounds/game-over-sound.mp3";
 
-import { Game } from "../functions/dist/index.js";
+// import { Game } from "../functions/dist/index.js";
 
 import { UserContext } from "../contexts/user/user.context";
 
