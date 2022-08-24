@@ -1,0 +1,29 @@
+.name-input {
+    text-align: center;
+}
+
+.name-component-top {
+    padding-top: 50px;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    transition: all 400ms linear;
+    left:0;
+}
+
+.name-component-center {
+    padding-top: 200px;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    transition: all 400ms linear;
+    left:0;
+}
+
+.numberOfPlayers {
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+    margin: 3px;
+    border-radius: 5px;
+}
