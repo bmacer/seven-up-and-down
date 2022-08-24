@@ -107,7 +107,6 @@ const Game = (props) => {
   //runs once on component mount
   useEffect(() => {
     console.log("line 107");
-    //shuffle PACK_OF_CARDS array
     const shuffledCards = shuffleArray(PACK_OF_CARDS);
 
     //extract first 7 elements to player1Deck
