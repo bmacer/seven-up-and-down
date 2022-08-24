@@ -15,7 +15,7 @@ import wildCardSound from "../assets/sounds/wild-sound.mp3";
 import draw4CardSound from "../assets/sounds/draw4-sound.mp3";
 import gameOverSound from "../assets/sounds/game-over-sound.mp3";
 
-import SevenGame from "../functions/dist/index.js";
+import { Game } from "../functions/dist/index.js";
 
 import { UserContext } from "../contexts/user/user.context";
 
@@ -101,7 +101,7 @@ const Game = (props) => {
 
   // Send initial game state
   useEffect(() => {
-    const g = new SevenGame(["b", "g"]);
+    const g = new Game(["b", "g"]);
     socket.emit("initalSevenGameState", g);
   }, []);
 
