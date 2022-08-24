@@ -97,7 +97,6 @@ const Game = (props) => {
   const [game, setGame] = useState("");
 
   useEffect(() => {});
-  // const g = new SevenGame(["brandon", "gabby"]);
 
   // Send initial game state
   useEffect(() => {
