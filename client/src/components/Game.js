@@ -26,21 +26,29 @@ import { UserContext } from "../contexts/user/user.context";
 //DRAW 4 WILD - 600
 
 let socket;
-const ENDPOINT = "http://localhost:5001";
+let ENDPOINT;
+if (window.location.hostname === "localhost") {
+  ENDPOINT = "http://localhost:5001";
+} else {
+  ENDPOINT = "https://seven-up-and-down.herokuapp.com";
+}
+// const ENDPOINT = "http://localhost:5001";
 // const ENDPOINT = 'https://uno-online-multiplayer.herokuapp.com/'
 
 const Game = (props) => {
-  const { currentName, setCurrentName } = useContext(UserContext);
-  console.log(`currentName: ${currentName}`);
-  setCurrentName("George");
-  console.log(`currentName: ${currentName}`);
+  console.log(`endpoint: ${ENDPOINT}`);
+
+  // const { currentName, setCurrentName } = useContext(UserContext);
+  // console.log(`currentName: ${currentName}`);
+  // setCurrentName("George");
+  // console.log(`currentName: ${currentName}`);
   const data = queryString.parse(props.location.search);
   // console.log(data);
 
   //initialize socket state
   const [room, setRoom] = useState(data.roomCode);
   const [currentPlayerName, setCurrentPlayerName] = useState(data.name);
-  console.log(currentPlayerName);
+  console.log(`currentPlayerName: ${currentPlayerName}`);
 
   const [roomFull, setRoomFull] = useState(false);
   const [users, setUsers] = useState([]);
@@ -99,10 +107,10 @@ const Game = (props) => {
   useEffect(() => {});
 
   // Send initial game state
-  useEffect(() => {
-    const g = new Game(["b", "g"]);
-    socket.emit("initalSevenGameState", g);
-  }, []);
+  // useEffect(() => {
+  //   const g = new Game(["b", "g"]);
+  //   socket.emit("initalSevenGameState", g);
+  // }, []);
 
   //runs once on component mount
   useEffect(() => {
